@@ -1,0 +1,5 @@
+import { createAction } from "@reduxjs/toolkit";
+
+import { USER_ACTION_TYPES } from "./user.types";
+
+export const setCurrentUser = createAction(USER_ACTION_TYPES.SET_CURRENT_USER);
