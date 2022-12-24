@@ -19,7 +19,7 @@ const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: false,
       immutableCheck: false, // check https://redux-toolkit.js.org/api/immutabilityMiddleware
-    }).concat(logger),
+    }).concat([process.env.NODE_ENV === 'development' && logger].filter(Boolean)),
 });
 
 export default store;
