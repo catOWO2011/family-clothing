@@ -11,3 +11,8 @@ export const selectCategories = createSelector(
       return acc;
     }, {})
 );
+
+export const selectCategoriesIsLoading = createSelector(
+  [selectCategoryReducer],
+  (category) => category.isLoading
+);
